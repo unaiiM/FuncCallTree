@@ -1,0 +1,263 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Secular";
+    src: url("./fonts/SecularOne-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Aton";
+    src: url("./fonts/Anton-Regular.ttf");
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: #CDCCCF;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    height: 80%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: -2vw 2vw 20px grey;
+    box-sizing: border-box;
+}
+
+/*
+    Divider
+*/
+
+.divider {
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+
+.wave-1 {
+    position: absolute;
+    right: 0;
+    width: 80%;
+    height: 50%;
+    border-bottom-left-radius: 100%;
+    background-color: #CDCCCF;
+    z-index: 2;
+}
+
+.wave-2 {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 60%;
+    height: 60%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background-color: #CDCCCF;
+    z-index: 2;
+}
+
+.wave-3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 50%;
+    border-bottom-left-radius: 100%;
+    background-color: #E4E4E5;
+    z-index: 1;
+}
+
+.wave-4 {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    width: 70%;
+    height: 60%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background-color: #E4E4E5;
+    z-index: 1;
+}
+
+.wave-5 {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 70%;
+    height: 40%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background-color: #CDCCCF;
+    z-index: 2;
+}
+
+.wave-6 {
+    position: absolute;
+    right: 0;
+    top: 20%;
+    width: 80%;
+    height: 40%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    background-color: #E4E4E5;
+    z-index: 1;
+}
+
+/*
+    Functions section
+*/
+
+.functions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 36%;
+    padding: 2%;
+    overflow-y: scroll;
+}
+
+.functions::-webkit-scrollbar {
+    width: 0.5vw;
+    background-color: white;
+}
+  
+.functions::-webkit-scrollbar-track {
+    background-color: white;
+}
+  
+.functions::-webkit-scrollbar-thumb {
+    background: #CDCCCF;
+}
+  
+.functions::-webkit-scrollbar-thumb:hover {
+    background: #CDCCCF;
+}
+
+.functions .func {
+    width: 60%;
+    padding: 2%;
+    margin-top: 4%;
+    font-family: "Secular";
+    font-size: 0.9vw;
+    text-overflow: ellipsis;
+    user-select: none;
+    color: grey;
+    letter-spacing: 0.05vw;
+    border-left: 0.4vw solid #CDCCCF;
+    border-right: 0.4vw solid #CDCCCF;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.func:hover {
+    background-color: #CDCCCF;
+    color: white;
+}
+
+/*
+    Function display section
+*/
+
+.display-function {
+    width: 32%;
+    padding: 4%;
+    background-color: #CDCCCF;
+}
+
+.display-function .name p {
+    font-size: 1.4vw;
+    font-family: "Aton";
+    text-transform: uppercase;
+    letter-spacing: 0.1vw;
+}
+
+.display-function .params {
+    min-height: calc(4% + 0.8vw);
+}
+
+.display-function .params .param {
+    display: inline-block;
+    padding: 2%;
+    background-color: white;
+    border-radius: 4px;
+    font-size: 0.8vw;
+    font-family: "Secular";
+    color: grey;
+}
+
+.display-function .body {
+    margin-top: 4%;
+}
+
+.display-function .body textarea {
+    width: calc(96% - 0.8vw);
+    padding: 2%;
+    font-size: 0.8vw;
+    height: 20vh;
+    resize: none;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    border-left: 0.4vw solid #E4E4E5;
+    border-right: 0.4vw solid #E4E4E5;
+}
+
+.display-function .calls {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    font-size: 0;
+}
+
+.display-function .calls .call {
+    display: inline-flex;
+    width: calc(48% - 0.4vw);
+    background-color: white;
+    margin-top: 4%;
+    color: grey;
+    letter-spacing: 0.05vw;
+    border-left: 0.4vw solid #E4E4E5;
+    border-radius: 4px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 0;
+}
+
+.display-function .calls .call div {
+    padding: 4%;
+    font-size: 0;
+}
+
+.display-function .calls .call p {
+    font-family: "Secular";
+    font-size: 0.8vw;
+    text-overflow: ellipsis;
+}
+
+.display-function .calls .call .call-name {
+    display: inline-block;
+    width: 72%;
+}
+
+.display-function .calls .call .call-times {
+    display: inline-block;
+    max-width: 20%;
+    min-width: 12%;
+    background-color: #E4E4E5;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.display-function .calls .call:hover {
+    background-color: #E4E4E5;
+}
