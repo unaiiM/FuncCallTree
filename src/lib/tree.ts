@@ -51,7 +51,7 @@ export default class Tree {
      * the call are pushed inside the queue where the function
      * of the call will be analitzed and stored.
      */
-    public build() : object {
+    public build() : FuncsStore {
 
         let queue : string[] = [this.fname]; // FIFO
 

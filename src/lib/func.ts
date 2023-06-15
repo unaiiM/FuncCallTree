@@ -25,7 +25,7 @@ export default class FuncParser {
      */
     public parse() : Func {
 
-        let func : Func = {
+        const func : Func = {
             name : this.getName(),
             params : this.getParams(),
             body : this.getBody()
@@ -69,7 +69,7 @@ export default class FuncParser {
      */
     public getBody() : string {
         
-        let body : string = this.func.slice(this.func.indexOf('{') + 1, this.func.length - 1);
+        const body : string = this.func.slice(this.func.indexOf('{') + 1, this.func.length - 1);
         return body.trim();
     };
 
@@ -79,7 +79,7 @@ export default class FuncParser {
      */
     public isAnon() : boolean {
 
-        let word : string = "function";
+        const word : string = "function";
         return this.func.slice(0, word.length) !== word;
 
     };

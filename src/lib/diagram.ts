@@ -41,6 +41,7 @@ export default class Diagram {
             fs.unlinkSync(dstPath + "/index.ejs");
 
         });
+        
     };
 
     /**
